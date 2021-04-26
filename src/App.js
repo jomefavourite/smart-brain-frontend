@@ -28,12 +28,6 @@ function App() {
   const [isSignedIn, setIsSignedIn] = useState(false);
   const [user, setUser] = useState(initailUserState);
 
-  useEffect(() => {
-    fetch("https://immense-hamlet-18637.herokuapp.com/")
-      .then((res) => res.json())
-      .then(console.log);
-  }, []);
-
   const loadUser = (user) => {
     setUser({
       id: user.id,
